@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Repitition-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController title="Repitition" id="9pv-A4-QxB" customClass="RepetitionViewController" customModule="LearnIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Vf-Gq-CcT" customClass="BackgroundView" customModule="LearnIt" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="blurEffect">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="gZY-CB-MHq">
+                                <rect key="frame" x="78" y="20" width="219" height="29"/>
+                                <segments>
+                                    <segment title="Old Testament"/>
+                                    <segment title="New Testament"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="didChangeSegment:" destination="9pv-A4-QxB" eventType="valueChanged" id="rAo-cz-w83"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yY-cq-dfz">
+                                <rect key="frame" x="16" y="64" width="52" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAm-na-dtw">
+                                <rect key="frame" x="80" y="64" width="279" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIv-wS-YpG" customClass="DesignableButton" customModule="LearnIt" customModuleProvider="target">
+                                <rect key="frame" x="191" y="426" width="176" height="88"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.30451871139999998" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="B">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapAnswerButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="j3V-aM-wMR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IJ-Pn-F2e" customClass="DesignableButton" customModule="LearnIt" customModuleProvider="target">
+                                <rect key="frame" x="8" y="426" width="176.5" height="88"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.30451871141975306" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="A">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapAnswerButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="znx-or-cwC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GrF-DR-BPh" customClass="DesignableButton" customModule="LearnIt" customModuleProvider="target">
+                                <rect key="frame" x="191" y="522" width="176" height="88"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.30451871139999998" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="D">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapAnswerButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="EJM-zN-hk8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3w-sT-Ifo" customClass="DesignableButton" customModule="LearnIt" customModuleProvider="target">
+                                <rect key="frame" x="8" y="522" width="176.5" height="88"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.30451871139999998" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="f3w-sT-Ifo" secondAttribute="height" multiplier="2:1" id="q49-ye-BTC"/>
+                                </constraints>
+                                <state key="normal" title="C">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapAnswerButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="zXT-L6-INh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8Vf-Gq-CcT" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="1Gu-eJ-WWC"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="GrF-DR-BPh" secondAttribute="bottom" constant="8" id="1Kk-qd-4Vv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JAm-na-dtw" secondAttribute="trailing" id="3AR-n6-QaR"/>
+                            <constraint firstItem="gZY-CB-MHq" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="3tB-fo-HDM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GrF-DR-BPh" secondAttribute="trailing" constant="-8" id="AOU-D3-qvz"/>
+                            <constraint firstItem="JAm-na-dtw" firstAttribute="centerY" secondItem="7yY-cq-dfz" secondAttribute="centerY" id="Agp-yI-WYG"/>
+                            <constraint firstAttribute="bottom" secondItem="8Vf-Gq-CcT" secondAttribute="bottom" id="EYX-3b-sMa"/>
+                            <constraint firstItem="7yY-cq-dfz" firstAttribute="top" secondItem="gZY-CB-MHq" secondAttribute="bottom" constant="16" id="He8-1G-Cec"/>
+                            <constraint firstItem="f3w-sT-Ifo" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.47" id="JTx-Wm-Pd6"/>
+                            <constraint firstItem="8Vf-Gq-CcT" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="KwO-jj-pjk"/>
+                            <constraint firstAttribute="trailing" secondItem="8Vf-Gq-CcT" secondAttribute="trailing" id="LCT-oV-T5Y"/>
+                            <constraint firstItem="GrF-DR-BPh" firstAttribute="top" secondItem="vIv-wS-YpG" secondAttribute="bottom" constant="8" id="MZD-n3-yhn"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="f3w-sT-Ifo" secondAttribute="leading" constant="8" id="Mig-GY-gwS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vIv-wS-YpG" secondAttribute="trailing" constant="-8" id="OqN-iu-TYE"/>
+                            <constraint firstItem="1IJ-Pn-F2e" firstAttribute="height" secondItem="f3w-sT-Ifo" secondAttribute="height" id="PPW-bf-Yuu"/>
+                            <constraint firstItem="GrF-DR-BPh" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.47" id="Vt9-vg-rMt"/>
+                            <constraint firstItem="1IJ-Pn-F2e" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-8" id="XoO-NP-Je6"/>
+                            <constraint firstItem="JAm-na-dtw" firstAttribute="height" secondItem="7yY-cq-dfz" secondAttribute="height" id="YAQ-vf-HeZ"/>
+                            <constraint firstItem="GrF-DR-BPh" firstAttribute="height" secondItem="f3w-sT-Ifo" secondAttribute="height" id="YZV-fg-Tp7"/>
+                            <constraint firstItem="f3w-sT-Ifo" firstAttribute="top" secondItem="1IJ-Pn-F2e" secondAttribute="bottom" constant="8" id="ZH7-Et-y5H"/>
+                            <constraint firstItem="gZY-CB-MHq" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="b8U-ft-KQz"/>
+                            <constraint firstItem="vIv-wS-YpG" firstAttribute="height" secondItem="GrF-DR-BPh" secondAttribute="height" id="dCb-d1-Zn7"/>
+                            <constraint firstItem="vIv-wS-YpG" firstAttribute="width" secondItem="GrF-DR-BPh" secondAttribute="width" id="eHg-qc-zvn"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="f3w-sT-Ifo" secondAttribute="bottom" constant="8" id="kcq-Nr-RWd"/>
+                            <constraint firstItem="1IJ-Pn-F2e" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.47" id="pDP-ec-yNF"/>
+                            <constraint firstItem="JAm-na-dtw" firstAttribute="leading" secondItem="7yY-cq-dfz" secondAttribute="trailing" constant="12" id="ykA-hB-Wkl"/>
+                            <constraint firstItem="7yY-cq-dfz" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="ysj-oZ-6Tk"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Repitition" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="lastChapterLabel" destination="JAm-na-dtw" id="7Ba-Hi-F0Q"/>
+                        <outlet property="testamentSegment" destination="gZY-CB-MHq" id="YuZ-Or-x0F"/>
+                        <outletCollection property="answerButtons" destination="1IJ-Pn-F2e" collectionClass="NSMutableArray" id="0UT-Ds-i30"/>
+                        <outletCollection property="answerButtons" destination="vIv-wS-YpG" collectionClass="NSMutableArray" id="YRK-Pn-wHT"/>
+                        <outletCollection property="answerButtons" destination="f3w-sT-Ifo" collectionClass="NSMutableArray" id="6Ya-Vg-kdR"/>
+                        <outletCollection property="answerButtons" destination="GrF-DR-BPh" collectionClass="NSMutableArray" id="cgR-Wq-3SO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+        </scene>
+        <!--Second-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
+                                <rect key="frame" x="83" y="313" width="209.5" height="41.5"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
+                                <rect key="frame" x="80" y="362.5" width="215" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
+                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
+                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
+                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="360"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" customClass="TabBarController" customModule="LearnIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
+</document>
