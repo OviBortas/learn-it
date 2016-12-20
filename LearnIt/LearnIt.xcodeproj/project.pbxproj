@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF5EAE4B1E09BC92004FBB9E /* Resetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5EAE4A1E09BC92004FBB9E /* Resetable.swift */; };
 		EF68255C1E08966300E03865 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF68255B1E08966300E03865 /* TabBarController.swift */; };
 		EF68255F1E08982700E03865 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF68255E1E08982700E03865 /* UIImageExtension.swift */; };
 		EF6825611E0899F800E03865 /* ShadowLineHideable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6825601E0899F800E03865 /* ShadowLineHideable.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF5EAE4A1E09BC92004FBB9E /* Resetable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resetable.swift; sourceTree = "<group>"; };
 		EF68255B1E08966300E03865 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		EF68255E1E08982700E03865 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		EF6825601E0899F800E03865 /* ShadowLineHideable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowLineHideable.swift; sourceTree = "<group>"; };
@@ -51,11 +53,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF5EAE491E09BC7A004FBB9E /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				EF6825601E0899F800E03865 /* ShadowLineHideable.swift */,
+				EF5EAE4A1E09BC92004FBB9E /* Resetable.swift */,
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
 		EF68255D1E0897FE00E03865 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				EF68255E1E08982700E03865 /* UIImageExtension.swift */,
-				EF6825601E0899F800E03865 /* ShadowLineHideable.swift */,
 				EF6825641E08B15800E03865 /* ArrayExtension.swift */,
 			);
 			name = Extension;
@@ -118,6 +128,7 @@
 		EF989D4A1E08545E00D12E22 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				EF5EAE491E09BC7A004FBB9E /* Protocol */,
 				EF68255D1E0897FE00E03865 /* Extension */,
 				EF989D4B1E08548E00D12E22 /* App */,
 			);
@@ -217,6 +228,7 @@
 				EF989D511E08582500D12E22 /* BackgroundView.swift in Sources */,
 				EF6825631E08AEE500E03865 /* NewTestament.swift in Sources */,
 				EF68255C1E08966300E03865 /* TabBarController.swift in Sources */,
+				EF5EAE4B1E09BC92004FBB9E /* Resetable.swift in Sources */,
 				EF989D4D1E08555300D12E22 /* DesignableButton.swift in Sources */,
 				EF68255F1E08982700E03865 /* UIImageExtension.swift in Sources */,
 			);

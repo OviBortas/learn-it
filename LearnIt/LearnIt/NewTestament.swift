@@ -14,6 +14,17 @@ struct NewTestamentBook {
     var current: Int? = nil
     var last4: [String]? = nil
     var currentSet: [String]? = nil
+    var delegate: Resetable? = nil
+    
+    var isFirst: Bool {
+        get {
+            guard let current = current else {
+                return false
+            }
+            
+            return current == 0
+        }
+    }
     
     init() {
         chapters = ["Matthew", "Mark", "Luke", "John", "Acts",
@@ -30,10 +41,16 @@ struct NewTestamentBook {
         current = nil
         last4 = nil
         currentSet = nil
+        
+        delegate?.didReset(reset: true)
     }
     
     mutating func nextSet() {
         
+        if current == chapters.count - 1 {
+            reset()
+            return
+        }
         // First run, values are nil
         guard let _ = current, let last = last4 else  {
             current = 0
@@ -47,9 +64,8 @@ struct NewTestamentBook {
                 if next.contains(rnd) { continue }
                 
                 next.append(rnd)
-                
             }
-            //next.shuffle()
+            next.shuffle()
             last4 = next
             
             currentSet = next
@@ -77,10 +93,7 @@ struct NewTestamentBook {
     }
     
     func isCorrect(guess: String) -> Bool {
-        
-        guard let current = current else {
-            return false
-        }
+        guard let current = current else { return false }
         
         return guess == chapters[current]
     }

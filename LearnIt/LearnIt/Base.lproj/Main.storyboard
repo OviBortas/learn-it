@@ -44,6 +44,18 @@
                                     <action selector="didChangeSegment:" destination="9pv-A4-QxB" eventType="valueChanged" id="rAo-cz-w83"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select first chapter:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zez-59-qjm">
+                                <rect key="frame" x="16" y="394" width="175" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congragulations, you named them all." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QlF-FZ-BOY">
+                                <rect key="frame" x="17.5" y="322" width="339.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yY-cq-dfz">
                                 <rect key="frame" x="16" y="64" width="52" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -159,6 +171,7 @@
                             <constraint firstAttribute="trailing" secondItem="8Vf-Gq-CcT" secondAttribute="trailing" id="LCT-oV-T5Y"/>
                             <constraint firstItem="GrF-DR-BPh" firstAttribute="top" secondItem="vIv-wS-YpG" secondAttribute="bottom" constant="8" id="MZD-n3-yhn"/>
                             <constraint firstAttribute="leadingMargin" secondItem="f3w-sT-Ifo" secondAttribute="leading" constant="8" id="Mig-GY-gwS"/>
+                            <constraint firstItem="QlF-FZ-BOY" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Mjf-38-FT7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vIv-wS-YpG" secondAttribute="trailing" constant="-8" id="OqN-iu-TYE"/>
                             <constraint firstItem="1IJ-Pn-F2e" firstAttribute="height" secondItem="f3w-sT-Ifo" secondAttribute="height" id="PPW-bf-Yuu"/>
                             <constraint firstItem="GrF-DR-BPh" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.47" id="Vt9-vg-rMt"/>
@@ -168,16 +181,21 @@
                             <constraint firstItem="f3w-sT-Ifo" firstAttribute="top" secondItem="1IJ-Pn-F2e" secondAttribute="bottom" constant="8" id="ZH7-Et-y5H"/>
                             <constraint firstItem="gZY-CB-MHq" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="b8U-ft-KQz"/>
                             <constraint firstItem="vIv-wS-YpG" firstAttribute="height" secondItem="GrF-DR-BPh" secondAttribute="height" id="dCb-d1-Zn7"/>
+                            <constraint firstItem="QlF-FZ-BOY" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="dzD-UT-RVW"/>
                             <constraint firstItem="vIv-wS-YpG" firstAttribute="width" secondItem="GrF-DR-BPh" secondAttribute="width" id="eHg-qc-zvn"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="f3w-sT-Ifo" secondAttribute="bottom" constant="8" id="kcq-Nr-RWd"/>
+                            <constraint firstItem="1IJ-Pn-F2e" firstAttribute="top" secondItem="zez-59-qjm" secondAttribute="bottom" constant="8" id="oh2-bP-tb5"/>
                             <constraint firstItem="1IJ-Pn-F2e" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.47" id="pDP-ec-yNF"/>
+                            <constraint firstItem="zez-59-qjm" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="v5Z-Kd-xdv"/>
                             <constraint firstItem="JAm-na-dtw" firstAttribute="leading" secondItem="7yY-cq-dfz" secondAttribute="trailing" constant="12" id="ykA-hB-Wkl"/>
                             <constraint firstItem="7yY-cq-dfz" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="ysj-oZ-6Tk"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Repitition" image="first" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="endLabel" destination="QlF-FZ-BOY" id="W5t-nt-7NU"/>
                         <outlet property="lastChapterLabel" destination="JAm-na-dtw" id="7Ba-Hi-F0Q"/>
+                        <outlet property="nextLabel" destination="zez-59-qjm" id="KdM-q5-53a"/>
                         <outlet property="testamentSegment" destination="gZY-CB-MHq" id="YuZ-Or-x0F"/>
                         <outletCollection property="answerButtons" destination="1IJ-Pn-F2e" collectionClass="NSMutableArray" id="0UT-Ds-i30"/>
                         <outletCollection property="answerButtons" destination="vIv-wS-YpG" collectionClass="NSMutableArray" id="YRK-Pn-wHT"/>
