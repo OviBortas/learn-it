@@ -8,7 +8,8 @@
 
 import UIKit
 
-@IBDesignable class DesignableButton: UIButton {
+@IBDesignable
+class DesignableButton: UIButton {
 
     @IBInspectable var cornerRadius: CGFloat = 0.0 {
         didSet {

@@ -24,7 +24,7 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mountain" translatesAutoresizingMaskIntoConstraints="NO" id="k9r-DI-tzh">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
-                <visualEffectView opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F18-5V-bll">
+                <visualEffectView opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F18-5V-bll">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="DEp-ku-vea">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>

@@ -46,13 +46,10 @@ class RepetitionViewController: UIViewController, Resetable {
         }
     }
     
-
-    
     @IBAction func didChangeSegment(_ sender: UISegmentedControl) {
     }
     
     @IBAction func didTapAnswerButton(_ sender: DesignableButton) {
-        
         guard let selectedAnswer = sender.titleLabel?.text else {
             print("No button title! Will return.")
             return
@@ -74,9 +71,6 @@ class RepetitionViewController: UIViewController, Resetable {
             justWon = reset
             
             updateAnswers() // need answers in buttons
-    
         }
     }
-    
-
 }

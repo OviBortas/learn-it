@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		EF5EAE4B1E09BC92004FBB9E /* Resetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5EAE4A1E09BC92004FBB9E /* Resetable.swift */; };
+		EF5EAE4D1E09D40C004FBB9E /* BeforeAndAfterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5EAE4C1E09D40C004FBB9E /* BeforeAndAfterViewController.swift */; };
+		EF5EAE4F1E09E391004FBB9E /* DraggableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5EAE4E1E09E391004FBB9E /* DraggableLabel.swift */; };
+		EF5EAE511E0A0FB9004FBB9E /* Draggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5EAE501E0A0FB9004FBB9E /* Draggable.swift */; };
 		EF68255C1E08966300E03865 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF68255B1E08966300E03865 /* TabBarController.swift */; };
 		EF68255F1E08982700E03865 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF68255E1E08982700E03865 /* UIImageExtension.swift */; };
 		EF6825611E0899F800E03865 /* ShadowLineHideable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6825601E0899F800E03865 /* ShadowLineHideable.swift */; };
@@ -25,6 +28,9 @@
 
 /* Begin PBXFileReference section */
 		EF5EAE4A1E09BC92004FBB9E /* Resetable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resetable.swift; sourceTree = "<group>"; };
+		EF5EAE4C1E09D40C004FBB9E /* BeforeAndAfterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeforeAndAfterViewController.swift; sourceTree = "<group>"; };
+		EF5EAE4E1E09E391004FBB9E /* DraggableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableLabel.swift; sourceTree = "<group>"; };
+		EF5EAE501E0A0FB9004FBB9E /* Draggable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Draggable.swift; sourceTree = "<group>"; };
 		EF68255B1E08966300E03865 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		EF68255E1E08982700E03865 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		EF6825601E0899F800E03865 /* ShadowLineHideable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowLineHideable.swift; sourceTree = "<group>"; };
@@ -58,6 +64,7 @@
 			children = (
 				EF6825601E0899F800E03865 /* ShadowLineHideable.swift */,
 				EF5EAE4A1E09BC92004FBB9E /* Resetable.swift */,
+				EF5EAE501E0A0FB9004FBB9E /* Draggable.swift */,
 			);
 			name = Protocol;
 			sourceTree = "<group>";
@@ -112,6 +119,7 @@
 				EF989D4C1E08555300D12E22 /* DesignableButton.swift */,
 				EF989D501E08582500D12E22 /* BackgroundView.swift */,
 				EF989D521E08583700D12E22 /* BackgroundView.xib */,
+				EF5EAE4E1E09E391004FBB9E /* DraggableLabel.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -120,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				EF989D451E08531D00D12E22 /* RepetitionViewController.swift */,
+				EF5EAE4C1E09D40C004FBB9E /* BeforeAndAfterViewController.swift */,
 				EF68255B1E08966300E03865 /* TabBarController.swift */,
 			);
 			name = Controller;
@@ -225,11 +234,14 @@
 				EF989D321E08521500D12E22 /* AppDelegate.swift in Sources */,
 				EF989D461E08531D00D12E22 /* RepetitionViewController.swift in Sources */,
 				EF6825651E08B15800E03865 /* ArrayExtension.swift in Sources */,
+				EF5EAE4F1E09E391004FBB9E /* DraggableLabel.swift in Sources */,
 				EF989D511E08582500D12E22 /* BackgroundView.swift in Sources */,
 				EF6825631E08AEE500E03865 /* NewTestament.swift in Sources */,
+				EF5EAE4D1E09D40C004FBB9E /* BeforeAndAfterViewController.swift in Sources */,
 				EF68255C1E08966300E03865 /* TabBarController.swift in Sources */,
 				EF5EAE4B1E09BC92004FBB9E /* Resetable.swift in Sources */,
 				EF989D4D1E08555300D12E22 /* DesignableButton.swift in Sources */,
+				EF5EAE511E0A0FB9004FBB9E /* Draggable.swift in Sources */,
 				EF68255F1E08982700E03865 /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -24,7 +24,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Vf-Gq-CcT" customClass="BackgroundView" customModule="LearnIt" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Vf-Gq-CcT" customClass="BackgroundView" customModule="LearnIt" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
@@ -207,10 +207,10 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
         </scene>
-        <!--Second-->
+        <!--Before & After-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="BeforeAndAfterViewController" customModule="LearnIt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -219,33 +219,245 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="83" y="313" width="209.5" height="41.5"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l5C-oE-oPG" customClass="BackgroundView" customModule="LearnIt" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="Water"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="blurEffect">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVU-bf-DDX" customClass="DraggableLabel" customModule="LearnIt" customModuleProvider="target">
+                                <rect key="frame" x="8" y="560" width="113" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="uUG-rP-kPF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyy-D5-dqI" customClass="DraggableLabel" customModule="LearnIt" customModuleProvider="target">
+                                <rect key="frame" x="7" y="27" width="115.5" height="52.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nZ-7m-Dmd" customClass="DraggableLabel" customModule="LearnIt" customModuleProvider="target">
+                                <rect key="frame" x="253.5" y="27" width="114.5" height="52"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18Y-2k-ChU">
+                                <rect key="frame" x="131" y="28" width="113" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="80" y="362.5" width="215" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXk-vc-bc8" customClass="DraggableLabel" customModule="LearnIt" customModuleProvider="target">
+                                <rect key="frame" x="254" y="560" width="113" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFG-fJ-Of6" customClass="DraggableLabel" customModule="LearnIt" customModuleProvider="target">
+                                <rect key="frame" x="131.5" y="560" width="113" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMp-Jm-QGb" customClass="DraggableLabel" customModule="LearnIt" customModuleProvider="target">
+                                <rect key="frame" x="8" y="502" width="113" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrP-QG-pZA" customClass="DraggableLabel" customModule="LearnIt" customModuleProvider="target">
+                                <rect key="frame" x="254" y="502" width="113" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8W-d6-cUb" customClass="DraggableLabel" customModule="LearnIt" customModuleProvider="target">
+                                <rect key="frame" x="131" y="502" width="113" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEW-Qa-wQU" customClass="DraggableLabel" customModule="LearnIt" customModuleProvider="target">
+                                <rect key="frame" x="8" y="444" width="113" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfj-7b-Emn" customClass="DraggableLabel" customModule="LearnIt" customModuleProvider="target">
+                                <rect key="frame" x="254" y="444" width="113" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Oa-bL-Lq6" customClass="DraggableLabel" customModule="LearnIt" customModuleProvider="target">
+                                <rect key="frame" x="131" y="444" width="113" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="cfj-7b-Emn" firstAttribute="height" secondItem="PVU-bf-DDX" secondAttribute="height" id="1xj-gO-6Kd"/>
+                            <constraint firstAttribute="trailing" secondItem="cfj-7b-Emn" secondAttribute="trailing" constant="8" id="22e-Gs-LHK"/>
+                            <constraint firstItem="2Oa-bL-Lq6" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="2uV-Xp-ISL"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="wFG-fJ-Of6" secondAttribute="bottom" constant="8" id="4Hg-AV-XYN"/>
+                            <constraint firstItem="l5C-oE-oPG" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="4JZ-ha-we1"/>
+                            <constraint firstItem="bMp-Jm-QGb" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" constant="8" id="4ml-b4-dqN"/>
+                            <constraint firstItem="18Y-2k-ChU" firstAttribute="width" secondItem="PVU-bf-DDX" secondAttribute="width" id="5ae-z9-CNE"/>
+                            <constraint firstItem="18Y-2k-ChU" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="706-aD-gYd"/>
+                            <constraint firstItem="7nZ-7m-Dmd" firstAttribute="width" secondItem="PVU-bf-DDX" secondAttribute="width" multiplier="1.015" id="76z-DU-2oA"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="PVU-bf-DDX" secondAttribute="bottom" constant="8" id="7Pz-ID-6zi"/>
+                            <constraint firstItem="S8W-d6-cUb" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="7av-pe-o2T"/>
+                            <constraint firstItem="aXk-vc-bc8" firstAttribute="width" secondItem="PVU-bf-DDX" secondAttribute="width" id="998-9p-Xmq"/>
+                            <constraint firstItem="PVU-bf-DDX" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" constant="8" id="B4c-Cp-yjw"/>
+                            <constraint firstItem="vrP-QG-pZA" firstAttribute="top" secondItem="cfj-7b-Emn" secondAttribute="bottom" constant="8" id="BQv-vU-omr"/>
+                            <constraint firstItem="wFG-fJ-Of6" firstAttribute="height" secondItem="PVU-bf-DDX" secondAttribute="height" id="Bhp-Fi-bLr"/>
+                            <constraint firstItem="eyy-D5-dqI" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="7" id="C5F-Ir-p4Y"/>
+                            <constraint firstItem="wFG-fJ-Of6" firstAttribute="top" secondItem="S8W-d6-cUb" secondAttribute="bottom" constant="8" id="CDB-23-Tin"/>
+                            <constraint firstItem="rEW-Qa-wQU" firstAttribute="height" secondItem="PVU-bf-DDX" secondAttribute="height" id="Cjp-Xs-NtK"/>
+                            <constraint firstItem="7nZ-7m-Dmd" firstAttribute="height" secondItem="PVU-bf-DDX" secondAttribute="height" multiplier="1.04" id="CwD-Yh-bst"/>
+                            <constraint firstItem="aXk-vc-bc8" firstAttribute="height" secondItem="PVU-bf-DDX" secondAttribute="height" id="DoZ-Kw-T7y"/>
+                            <constraint firstItem="18Y-2k-ChU" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="8" id="EEu-sy-EbJ"/>
+                            <constraint firstItem="S8W-d6-cUb" firstAttribute="top" secondItem="2Oa-bL-Lq6" secondAttribute="bottom" constant="8" id="F8V-8n-5IH"/>
+                            <constraint firstItem="2Oa-bL-Lq6" firstAttribute="width" secondItem="PVU-bf-DDX" secondAttribute="width" id="Fat-1a-de8"/>
+                            <constraint firstItem="eyy-D5-dqI" firstAttribute="width" secondItem="PVU-bf-DDX" secondAttribute="width" multiplier="1.015" id="GdV-jB-ZFh"/>
+                            <constraint firstItem="PVU-bf-DDX" firstAttribute="top" secondItem="bMp-Jm-QGb" secondAttribute="bottom" constant="8" id="IK6-IE-M4J"/>
+                            <constraint firstItem="PVU-bf-DDX" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" multiplier="0.3" id="Kpm-Zs-Ej9"/>
+                            <constraint firstItem="wFG-fJ-Of6" firstAttribute="width" secondItem="PVU-bf-DDX" secondAttribute="width" id="N0R-Rd-aNf"/>
+                            <constraint firstItem="eyy-D5-dqI" firstAttribute="height" secondItem="PVU-bf-DDX" secondAttribute="height" multiplier="1.04" id="QPf-hv-BGr"/>
+                            <constraint firstItem="vrP-QG-pZA" firstAttribute="width" secondItem="PVU-bf-DDX" secondAttribute="width" id="Qwb-zD-dbq"/>
+                            <constraint firstItem="cfj-7b-Emn" firstAttribute="width" secondItem="PVU-bf-DDX" secondAttribute="width" id="RZH-aY-BBT"/>
+                            <constraint firstItem="18Y-2k-ChU" firstAttribute="height" secondItem="PVU-bf-DDX" secondAttribute="height" id="S7u-IG-2Gx"/>
+                            <constraint firstItem="wFG-fJ-Of6" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="SOX-gd-ETa"/>
+                            <constraint firstItem="aXk-vc-bc8" firstAttribute="top" secondItem="vrP-QG-pZA" secondAttribute="bottom" constant="8" id="Uck-79-wC7"/>
+                            <constraint firstItem="rEW-Qa-wQU" firstAttribute="width" secondItem="PVU-bf-DDX" secondAttribute="width" id="UzR-LE-VTl"/>
+                            <constraint firstItem="S8W-d6-cUb" firstAttribute="height" secondItem="PVU-bf-DDX" secondAttribute="height" id="WLn-Sb-ZtG"/>
+                            <constraint firstItem="rEW-Qa-wQU" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" constant="8" id="YKa-dR-hop"/>
+                            <constraint firstItem="vrP-QG-pZA" firstAttribute="height" secondItem="PVU-bf-DDX" secondAttribute="height" id="dHQ-1I-HkP"/>
+                            <constraint firstItem="bMp-Jm-QGb" firstAttribute="height" secondItem="PVU-bf-DDX" secondAttribute="height" id="eEg-d1-4qG"/>
+                            <constraint firstItem="bMp-Jm-QGb" firstAttribute="top" secondItem="rEW-Qa-wQU" secondAttribute="bottom" constant="8" id="gKQ-nC-8SW"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="aXk-vc-bc8" secondAttribute="bottom" constant="8" id="i7Z-Q5-m1I"/>
+                            <constraint firstItem="l5C-oE-oPG" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="iSf-D9-dml"/>
+                            <constraint firstAttribute="bottom" secondItem="l5C-oE-oPG" secondAttribute="bottom" id="ilx-4v-wsZ"/>
+                            <constraint firstItem="S8W-d6-cUb" firstAttribute="width" secondItem="PVU-bf-DDX" secondAttribute="width" id="lnN-gK-uNH"/>
+                            <constraint firstAttribute="trailing" secondItem="7nZ-7m-Dmd" secondAttribute="trailing" constant="7" id="lsV-yR-8KA"/>
+                            <constraint firstAttribute="trailing" secondItem="l5C-oE-oPG" secondAttribute="trailing" id="o6Y-Yo-BCE"/>
+                            <constraint firstItem="7nZ-7m-Dmd" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="7" id="okT-tG-v8G"/>
+                            <constraint firstItem="eyy-D5-dqI" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" constant="7" id="qfO-28-xt2"/>
+                            <constraint firstItem="aXk-vc-bc8" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailing" constant="-8" id="vIv-gP-21Q"/>
+                            <constraint firstItem="bMp-Jm-QGb" firstAttribute="width" secondItem="PVU-bf-DDX" secondAttribute="width" id="vu1-CF-EVK"/>
+                            <constraint firstAttribute="trailing" secondItem="vrP-QG-pZA" secondAttribute="trailing" constant="8" id="wbG-jU-cYi"/>
+                            <constraint firstItem="2Oa-bL-Lq6" firstAttribute="height" secondItem="PVU-bf-DDX" secondAttribute="height" id="zbQ-2K-1nt"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Before &amp; After" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="leftChapterLabel" destination="eyy-D5-dqI" id="9qc-nq-bkR"/>
+                        <outlet property="middleChapterLabel" destination="18Y-2k-ChU" id="exL-ae-jDh"/>
+                        <outlet property="rightChapterLabel" destination="7nZ-7m-Dmd" id="gbj-Rr-QSr"/>
+                        <outletCollection property="chapterLabels" destination="rEW-Qa-wQU" collectionClass="NSMutableArray" id="jDh-fj-ZGx"/>
+                        <outletCollection property="chapterLabels" destination="2Oa-bL-Lq6" collectionClass="NSMutableArray" id="g9X-5k-J9Y"/>
+                        <outletCollection property="chapterLabels" destination="cfj-7b-Emn" collectionClass="NSMutableArray" id="Unf-jJ-ZVg"/>
+                        <outletCollection property="chapterLabels" destination="vrP-QG-pZA" collectionClass="NSMutableArray" id="EXo-PX-T5y"/>
+                        <outletCollection property="chapterLabels" destination="S8W-d6-cUb" collectionClass="NSMutableArray" id="8Ks-Ym-Ewp"/>
+                        <outletCollection property="chapterLabels" destination="bMp-Jm-QGb" collectionClass="NSMutableArray" id="aj3-5G-anr"/>
+                        <outletCollection property="chapterLabels" destination="PVU-bf-DDX" collectionClass="NSMutableArray" id="mTe-sX-eeP"/>
+                        <outletCollection property="chapterLabels" destination="wFG-fJ-Of6" collectionClass="NSMutableArray" id="Gce-Dh-TCW"/>
+                        <outletCollection property="chapterLabels" destination="aXk-vc-bc8" collectionClass="NSMutableArray" id="pCd-uM-Yxa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -268,6 +480,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Water" width="1120" height="1500"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>

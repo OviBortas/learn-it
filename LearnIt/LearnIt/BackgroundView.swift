@@ -11,6 +11,14 @@ import UIKit
 @IBDesignable
 class BackgroundView: UIView {
     
+    @IBInspectable var image: UIImage? = nil {
+        didSet { backgroundImage.image = image }
+    }
+    
+    @IBInspectable var blurAlpha: CGFloat = 0.95 {
+        didSet { backgroundVisualEffect.alpha = blurAlpha }
+    }
+    
     @IBInspectable var blurEffect: Int = 0 {
         didSet {
             if blurEffect >= 0 && blurEffect <= 2 {
@@ -18,8 +26,6 @@ class BackgroundView: UIView {
             }
         }
     }
-    
-    @IBInspectable var blurAlpha = 0
     
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var backgroundVisualEffect: UIVisualEffectView!
@@ -62,5 +68,5 @@ class BackgroundView: UIView {
         
         return view
     }
-
+    
 }
